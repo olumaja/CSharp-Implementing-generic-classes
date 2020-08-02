@@ -1,0 +1,13 @@
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\bin\Debug\netcoreapp3.1\CSharpComplexDataStructures.exe
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\bin\Debug\netcoreapp3.1\CSharpComplexDataStructures.deps.json
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\bin\Debug\netcoreapp3.1\CSharpComplexDataStructures.runtimeconfig.json
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\bin\Debug\netcoreapp3.1\CSharpComplexDataStructures.runtimeconfig.dev.json
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\bin\Debug\netcoreapp3.1\CSharpComplexDataStructures.dll
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\bin\Debug\netcoreapp3.1\CSharpComplexDataStructures.pdb
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.AssemblyInfo.cs
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.dll
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.pdb
+C:\Users\hp\source\repos\CSharpComplexDataStructures\CSharpComplexDataStructures\obj\Debug\netcoreapp3.1\CSharpComplexDataStructures.genruntimeconfig.cache
