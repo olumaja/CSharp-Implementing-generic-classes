@@ -13,6 +13,7 @@ namespace CSharpComplexDataStructures
         public TheNode<T> Tall { get; private set; }
         public int Size { get; private set; }
         public int ItemIndex { get; private set; }
+        public string Deks { get; private set; }
 
         public int Count => throw new NotImplementedException();
 
@@ -42,11 +43,19 @@ namespace CSharpComplexDataStructures
 
                 //If the list was empty, the tail and head are the same.
                 Head = addedItem;
+                //Head.NextNode = null;
+                //Head.PreviousNode = null;
                 Tall = Head;
+
             }
 
             Size++;  //Increment the size of the linked list.
 
+        }
+
+        internal object RemoveFirst()
+        {
+            throw new NotImplementedException();
         }
 
         //Add new item to the tail 
@@ -67,6 +76,7 @@ namespace CSharpComplexDataStructures
                 itemAdder.NextNode = Tall;
                 Tall = itemAdder;
                 Tall.PreviousNode = null;
+                
                 Size++;
             }
             
@@ -119,6 +129,34 @@ namespace CSharpComplexDataStructures
             return true;
         }
 
+        //Remove the last item in the linked list
+        public T RemoveLast()
+        {
+
+           // bool status;
+            if(Tall.Value == null)
+            {
+                return default(T);
+            }
+            
+            Remove(Tall.Value); //Remove the last item in the list by pass the item in the tall
+            return Tall.Value;
+        }
+
+        //Remove first item from linked list
+        public T RemoveFisrtItem()
+        {
+
+            // bool status;
+            if (Head.Value == null)
+            {
+                return default(T);
+            }
+
+            Remove(Head.Value); //Remove the first item in the list
+            return Head.Value;
+        }
+
         //Check if a value exist return true, else return false
         public bool Check(T userValue)
         {
@@ -163,28 +201,37 @@ namespace CSharpComplexDataStructures
         //Insert Item
         public void Insert(T value, int position)
         {
-            TheNode<T> currents = Head;  //initial the currents with the head
-
-            var counter = 1;
-            TheNode<T> newItem = new TheNode<T>(value);
-
-            while (counter < position)
+            if(position <= Size)
             {
-                      
-                currents = currents.PreviousNode; //Update currents with the next node until counter equal position
-                counter++;
-                Console.WriteLine(counter);
+
+                TheNode<T> currents = Head;  //initial the currents with the head
+                
+                var counter = 1;
+                TheNode<T> newItem = new TheNode<T>(value);
+
+                while (counter < position)
+                {
+                    
+                    currents = currents.PreviousNode; //Update currents with the next node until counter equal position
+                    
+                    counter++;
+                    
+                }
+
+                currents.NextNode.PreviousNode = newItem;
+                newItem.PreviousNode = currents;
+                newItem.NextNode = currents.NextNode;
+                currents.NextNode = newItem;
+
+                Console.WriteLine(value + " was inserted  successfully");
+                
+
+            }
+            else
+            {
+                Console.WriteLine("Position should not be more than " + Size);
             }
             
-            currents.NextNode.PreviousNode = newItem;
-            newItem.PreviousNode = currents;
-            newItem.NextNode = currents.NextNode;
-            currents.NextNode = newItem;
-
-            Console.WriteLine("Value inserted " + value);
-            Console.WriteLine("Value of the current node " + currents.Value);
-            Console.WriteLine("Value of current previous " + currents.PreviousNode.Value);
-            Console.WriteLine("Value of current next " + currents.NextNode.Value);
         }
 
 

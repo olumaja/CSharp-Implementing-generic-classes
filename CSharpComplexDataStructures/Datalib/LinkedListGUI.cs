@@ -32,6 +32,8 @@ namespace CSharpComplexDataStructures.Datalib
             Console.WriteLine();
 
             checkerList.AddTail(char.ToUpper(itemName[0]) + itemName.Substring(1).ToLower());
+            Console.WriteLine(char.ToUpper(itemName[0]) + itemName.Substring(1).ToLower() + " was add to the list");
+            Console.WriteLine();
             Console.WriteLine("The current size of LinkedList is {0}", checkerList.Size);
             Console.WriteLine();
 
@@ -44,9 +46,17 @@ namespace CSharpComplexDataStructures.Datalib
             var userValue = Console.ReadLine();
             Console.WriteLine();
             checkerList.Remove(char.ToUpper(userValue[0]) + userValue.Substring(1).ToLower());
+            Console.WriteLine(char.ToUpper(userValue[0]) + userValue.Substring(1).ToLower() + " was remove from the list");
             Console.WriteLine("The current size of LinkedList is {0}", checkerList.Size);
-            //Print method goes in here
+            Console.WriteLine();
 
+        }
+
+        public void RemoverLast()
+        {
+            //Remove last method interface
+            checkerList.RemoveLast();
+            Console.WriteLine("The current size of LinkedList is {0}", checkerList.Size);
         }
 
         public void Check()
@@ -64,26 +74,22 @@ namespace CSharpComplexDataStructures.Datalib
         public void Search()
         {
 
-                        Console.Write("Enter item into the linked list: ");
-                        var userInput = Console.ReadLine();
-                        Console.WriteLine();
+            Console.Write("Enter item into the linked list: ");
+            var userInput = Console.ReadLine();
+            Console.WriteLine();
+            var outCome = checkerList.Search(char.ToUpper(userInput[0]) + userInput.Substring(1).ToLower());
 
-                        //If the user enter a value, then search for the value in the linked list
-                        //if (userInput.ToLower() != "q")
-                        //{
-                            var outCome = checkerList.Search(char.ToUpper(userInput[0]) + userInput.Substring(1).ToLower());
+            if (outCome != null)
+            {
+               Console.WriteLine($"{outCome.Value} found, operation sucessful");
 
-                            if (outCome != null)
-                            {
-                                Console.WriteLine($"{outCome.Value} found, operation sucessful");
+            }
 
-                            }
+            else
+            {
+              Console.WriteLine($"{userInput} is not in the linked list");
 
-                            else
-                            {
-                                Console.WriteLine($"{userInput} is not in the linked list");
-
-                            }
+            }
 
         }
 
@@ -109,7 +115,7 @@ namespace CSharpComplexDataStructures.Datalib
             Console.WriteLine("At index " + checkerList.IndexItem());
         }
 
-        //Empty tester
+        //Empty tester method
         public bool EmptyStatus()
         {
             return checkerList.IsEmpty();
@@ -118,7 +124,8 @@ namespace CSharpComplexDataStructures.Datalib
         //List Size
         public void SizeOfList()
         {
-            Console.WriteLine(checkerList.Size);
+            Console.WriteLine("The linked list size is " + checkerList.Size);
+            Console.WriteLine();
         }
 
     }
