@@ -10,9 +10,9 @@ namespace CSharpComplexDataStructures
         {
 
             string userResponse;
-            LinkedListGUI userlistGui = new LinkedListGUI();
-            StackGUI guiForStack = new StackGUI();
-            GenericQueue queueGUI = new GenericQueue();
+            LinkedListGUI<string> userlistGui = new LinkedListGUI<string>();
+            StackGUI<string> guiForStack = new StackGUI<string>();
+            GenericQueue<string> queueGUI = new GenericQueue<string>();
 
             Console.WriteLine("Welcome to my data structure");
             Console.WriteLine();

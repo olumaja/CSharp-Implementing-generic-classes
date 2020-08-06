@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CSharpComplexDataStructures
 {
-    class GenericQueue
+    class GenericQueue<T> : ICollection<T>
     {
 
         LinkedList<string> checkerList = new LinkedList<string>(); //Instantiate linked list
         string printerValue = "---------------------------------------------------------------\n";
+
+        public int Count => throw new NotImplementedException();
+
+        public bool IsReadOnly => throw new NotImplementedException();
 
         public void Enqueue()
         {
@@ -54,7 +59,39 @@ namespace CSharpComplexDataStructures
             Console.WriteLine();
         }
 
-        
+        public void Add(T item)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
